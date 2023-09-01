@@ -1,11 +1,8 @@
-#root {
-  max-width: 1280px;
+body {
   margin: 0;
-  padding: 0;
-  text-align: center;
+  overflow-x: hidden;
 }
-
 .canvas {
-  background-color: blue;
-  border: 2px solid red;
+  border: 1px solid black;
+  background-color: white;
 }
