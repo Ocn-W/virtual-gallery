@@ -7,7 +7,7 @@ import { useGLTF, OrbitControls, PerspectiveCamera } from "@react-three/drei";
 import Loader from "../../loader";
 import { Canvas } from "@react-three/fiber";
 
-export default function Artwork(props) {
+export default function BibAccAngels(props) {
   const { nodes, materials } = useGLTF("src/assets/blender-objects/paintings/bba-painting-exp.gltf");
   //Edit Camera Position
   const cameraConfig = { fov: 60, position: [10, 0, 0] }
@@ -15,7 +15,7 @@ export default function Artwork(props) {
   const objectPosition = [0,-4,0];
 
   return (
-  <Canvas style={{height: '80vh', width:'60vh'}}>
+  <Canvas style={{height: '80vh', width:'60vh'}} className="artwork-container">
     <Suspense fallback={<Loader/>}>
     <PerspectiveCamera makeDefault {...cameraConfig}/>
     <group {...props} dispose={null}>
@@ -42,7 +42,7 @@ export default function Artwork(props) {
       />
     </group>
     <ambientLight intensity={5}/>
-    <OrbitControls enableZoom={false} object={Artwork}/>
+    <OrbitControls enableZoom={false} object={BibAccAngels}/>
     </Suspense>
   </Canvas>
   );

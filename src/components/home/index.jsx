@@ -1,12 +1,10 @@
 import React from 'react';
-import { OrbitControls } from '@react-three/drei';
-import { Canvas } from '@react-three/fiber';
-import Artwork from '../paintings/BiblicallyAccurateAngels';
+import ArtworkCarousel from '../artwork-carousel';
 
 export default function Home() {
   return (
     <>
-        <Artwork/>
+        <ArtworkCarousel/>
     </>
   );
 }
