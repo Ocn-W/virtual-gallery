@@ -1,10 +1,10 @@
 import React from 'react';
-import ArtworkCarousel from '../artwork-carousel';
+import ArtworkViewer from '../artwork-viewer';
 
 export default function Home() {
   return (
     <>
-        <ArtworkCarousel/>
+      <ArtworkViewer/>
     </>
   );
 }

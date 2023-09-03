@@ -3,13 +3,39 @@ body {
   overflow-x: hidden;
 }
 
-.artwork-container {
-  border: 1px solid red;
-}
-
-.carousel {
+.artview-container{
+  border: 1px solid blue;
   display: flex;
-  flex: 1;
-  justify-content: center;
-  gap: 10px;
+
+  .art-selection{
+    width: 50%;
+    .art-image{
+      margin: 10px 0;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      img {
+        height: 200px;
+        width: 150px;
+      }:hover {
+        box-shadow: 0px 0px 5px black;
+      }:active {
+        box-shadow: 0px 0px 1px black;
+      }
+    }
+
+  }
+
+  .art-view{
+    width: 50%;
+    background-color: grey;
+    .artwork {
+      border: 1px solid red;
+      background-color: white;
+      color: black;
+      height: 100vh;
+    }
+  }
+
 }
