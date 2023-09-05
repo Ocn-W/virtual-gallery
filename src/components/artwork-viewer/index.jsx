@@ -43,7 +43,7 @@ export default function ArtworkViewer(props) {
           </div>
         </section>
         <section className="art-view">
-            <Canvas style={{ height: "80vh", width: "60vh" }} className="artwork-container">
+            <Canvas style={{ height: "100%", width: "100%" }} className="artwork-container">
               <Suspense fallback={<Loader/>}>
                 <PerspectiveCamera makeDefault {...cameraConfig} />
                 <group {...props} dispose={null}>

@@ -7,12 +7,41 @@ body {
   text-align: center;
 }
 
-.artview-container{
-  border: 2px solid blue;
+nav {
+  border-bottom: 1px solid black;
+  margin-bottom: 10px;
   display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  h1 {
+    cursor: pointer;
+  }
+  ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    li {
+      cursor: pointer;
+    }:hover {
+      text-decoration: underline;
+    }:active {
+      color: lime
+    }
+    a {
+      color: black;
+      text-decoration: none;
+    }
+  }
+}
+
+.artview-container{
+  display: flex;
+  height: 80vh;
 
   .art-selection{
     width: 50%;
+    height: 100%;
+    overflow-y: auto;
     .art-image{
       margin: 10px 0;
       display: flex;
@@ -23,6 +52,7 @@ body {
         height: 200px;
         width: 150px;
       }:hover {
+        cursor: pointer;
         box-shadow: 0px 0px 5px black;
       }:active {
         box-shadow: 0px 0px 1px black;
@@ -33,9 +63,13 @@ body {
 
   .art-view{
     width: 50%;
-    background-color: white;
-    border-left: 1px dashed grey;
+    background-color: grey;
+    border: 1px solid black;
+    box-shadow: 0px 0px 5px inset black;
     display: flex;
     justify-content: center;
+    cursor: grab;
+  }:active {
+    cursor: grabbing;
   }
 }
