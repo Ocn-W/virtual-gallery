@@ -3,6 +3,10 @@ body {
   overflow-x: hidden;
 }
 
+.loader {
+  text-align: center;
+}
+
 .artview-container{
   border: 2px solid blue;
   display: flex;
@@ -31,12 +35,7 @@ body {
     width: 50%;
     background-color: white;
     border-left: 1px dashed grey;
-    .artwork {
-      border: 1px solid red;
-      background-color: white;
-      color: black;
-      height: 100vh;
-    }
+    display: flex;
+    justify-content: center;
   }
-
 }

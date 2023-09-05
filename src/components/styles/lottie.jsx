@@ -1,3 +1,3 @@
 export const lottieSVG = [
-    loading = 'src/assets/lottieJSON/loadingAnim.json',
+    'src/assets/lottieJSON/animation_lm6utkmn.json',
 ];
