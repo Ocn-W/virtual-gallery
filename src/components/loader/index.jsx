@@ -3,6 +3,6 @@ import { useProgress, Html } from "@react-three/drei";
 export default function Loader() {
     const {progress} = useProgress();
     return (
-      <Html center>{progress}% Loaded!</Html>
+      <Html center style={{color: "black"}}>{progress}% Loaded!</Html>
     );
 }

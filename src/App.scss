@@ -4,7 +4,7 @@ body {
 }
 
 .artview-container{
-  border: 1px solid blue;
+  border: 2px solid blue;
   display: flex;
 
   .art-selection{
@@ -29,7 +29,8 @@ body {
 
   .art-view{
     width: 50%;
-    background-color: grey;
+    background-color: white;
+    border-left: 1px dashed grey;
     .artwork {
       border: 1px solid red;
       background-color: white;
