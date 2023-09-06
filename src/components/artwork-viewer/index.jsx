@@ -24,7 +24,7 @@ export default function ArtworkViewer(props) {
   function artworkSelected(index) {
     //Lets React know this is apart of an async update
     startTransition(() => {
-        setSelectedArtwork(index);
+      setSelectedArtwork(index);
     });
   }
 

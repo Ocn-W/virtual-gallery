@@ -1,15 +1,17 @@
-import React from 'react'
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 export default function Navigation() {
   return (
     <>
     <nav>
         <section>
-            <h1>GALLERY OCEAN</h1>
+            <Link to='/'><h1>GALLERY OCEAN</h1></Link>
         </section>
         <ul>
-            <li>VISIT GALLERY</li>
-            <li><a href='https://oceanwaring.netlify.app/'>PORTFOLIO</a></li>
+            <Link to='/gallery'>VISIT GALLERY</Link>
+            <li><a target='_blank' href='https://oceanwaring.netlify.app/'>PORTFOLIO</a></li>
+            <Link to='/checkout'>YOUR CART</Link>
         </ul>
     </nav>
     </>
