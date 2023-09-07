@@ -12,7 +12,6 @@ export function Model(props) {
 
   useEffect(() => {
     let action = '';
-    console.log(action);
     if(forward || backward || left || right) {
       action = 'Walking';
       if(shift) {
