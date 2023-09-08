@@ -1,8 +1,8 @@
 import React, { Suspense, useRef } from "react";
 import { Canvas } from "@react-three/fiber";
-import { useGLTF, PerspectiveCamera, OrbitControls } from "@react-three/drei";
+import { useGLTF } from "@react-three/drei";
 import Loader from "../loader";
-import { Model } from "../character";
+import { Player } from "../character";
 import Navigation from "../navigation";
 
 export default function VirtualGallery(props) {
@@ -13,7 +13,7 @@ export default function VirtualGallery(props) {
     <>
       <Navigation />
       <div className="galleryContainer">
-        <Canvas style={{ height: "100%", width: "auto" }}>
+        <Canvas style={{ height: "100%", width: "auto" }} camera={{fov: 55, near: 0.1, far: 1000, position: [0, 3, 7]}}>
           <Suspense fallback={<Loader />}>
             <group {...props} dispose={null}>
               <group position={[0, 0, 0.022]}>
@@ -33,9 +33,8 @@ export default function VirtualGallery(props) {
                 </group>
               </group>
             </group>
-            <Model />
+            <Player />
             <ambientLight intensity={5} />
-            <OrbitControls />
           </Suspense>
         </Canvas>
       </div>
