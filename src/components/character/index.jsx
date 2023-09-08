@@ -34,10 +34,10 @@ const directionOffset = ({forward, backward, left, right}) => {
 }
 
 export function Player(props) {
-  const model = useGLTF("public/assets/blender-objects/character/testChar.gltf");
+  const model = useGLTF("/assets/blender-objects/character/testChar.gltf");
   const group = useRef(model.scene);
   const { forward, backward, left, right, shift } = useInput();
-  const { animations } = useGLTF("public/assets/blender-objects/character/testChar.gltf");
+  const { animations } = useGLTF("/assets/blender-objects/character/testChar.gltf");
   const { actions } = useAnimations(animations, group);
 
   const currentAction = useRef('');
@@ -203,4 +203,4 @@ export function Player(props) {
   
 }
 
-useGLTF.preload("public/assets/blender-objects/character/testChar.gltf");
+useGLTF.preload("/assets/blender-objects/character/testChar.gltf");

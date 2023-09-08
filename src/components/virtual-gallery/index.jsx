@@ -7,7 +7,7 @@ import Navigation from "../navigation";
 
 export default function VirtualGallery(props) {
   const { nodes, materials } = useGLTF(
-    "public/assets/blender-objects/scene/testEnv.gltf"
+    "/assets/blender-objects/scene/testEnv.gltf"
   );
   return (
     <>
@@ -42,4 +42,4 @@ export default function VirtualGallery(props) {
   );
 }
 
-useGLTF.preload("public/assets/blender-objects/scene/testEnv.gltf");
+useGLTF.preload("/assets/blender-objects/scene/testEnv.gltf");
