@@ -1,7 +1,7 @@
 export const artworkImages = [
-    'src/assets/artwork-images/BBAImg.JPG',
-    'src/assets/artwork-images/EndGameImg.JPG',
-    'src/assets/artwork-images/EssayImg.JPG',
-    'src/assets/artwork-images/GoImg.JPG',
-    'src/assets/artwork-images/ThreeRsImg.JPG'
+    'public/assets/artwork-images/BBAImg.JPG',
+    'public/assets/artwork-images/EndGameImg.JPG',
+    'public/assets/artwork-images/EssayImg.JPG',
+    'public/assets/artwork-images/GoImg.JPG',
+    'public/assets/artwork-images/ThreeRsImg.JPG'
 ];
