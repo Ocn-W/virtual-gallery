@@ -1,4 +1,5 @@
 import { useProgress } from "@react-three/drei";
+import { Html } from "@react-three/drei";
 import { useLottie } from "lottie-react";
 import { lottieSVG } from "../styles/lottie";
 
@@ -11,9 +12,9 @@ export default function Loader() {
     const {loadAnim} = useLottie(options);
 
     return (
-      <div className="loader">
+      <Html className="loader">
         <>{loadAnim}</>
-        <p style={{color: "black"}}>{progress}% Loaded!</p>
-      </div>
+        <Html centered style={{color: "black"}}>{progress}% Loaded!</Html>
+      </Html>
     );
 }

@@ -30,10 +30,10 @@ export const useInput = () => {
 
         //Sets boolean values to either true or false
         const handleKeyDown = (e) => {
-            setInput((m) => ({...m, [findInputKey(e.code)]: true}));
+            setInput((key) => ({...key, [findInputKey(e.code)]: true}));
         }
         const handleKeyUp = (e) => {
-            setInput((m) => ({...m, [findInputKey(e.code)]: false}));
+            setInput((key) => ({...key, [findInputKey(e.code)]: false}));
         }
 
         //Listens for user input

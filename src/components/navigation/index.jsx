@@ -6,7 +6,7 @@ export default function Navigation() {
     <>
     <nav>
         <section>
-            <Link to='/'><h1>GALLERY OCEAN</h1></Link>
+            <Link to='/'><h1>O GALLERY</h1></Link>
         </section>
         <ul>
             <Link to='/gallery'>VISIT GALLERY</Link>
