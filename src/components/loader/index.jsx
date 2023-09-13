@@ -2,6 +2,7 @@ import { useProgress } from "@react-three/drei";
 import { Html } from "@react-three/drei";
 import { useLottie } from "lottie-react";
 import { lottieSVG } from "../styles/lottie";
+import { Canvas } from "@react-three/fiber";
 
 export default function Loader() {
   const options = {
@@ -12,9 +13,11 @@ export default function Loader() {
     const {loadAnim} = useLottie(options);
 
     return (
-      <Html className="loader">
-        <>{loadAnim}</>
-        <Html centered style={{color: "black"}}>{progress}% Loaded!</Html>
-      </Html>
+      <Canvas>
+        <Html className="loader">
+          <>{loadAnim}</>
+          <Html centered style={{color: "black"}}>{progress}% Loaded!</Html>
+        </Html>
+      </Canvas>
     );
 }

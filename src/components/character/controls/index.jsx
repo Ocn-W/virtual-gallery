@@ -27,7 +27,6 @@ export const useInput = () => {
     const findInputKey = (key) => inputKeys[key];
 
     useEffect(() => {
-
         //Sets boolean values to either true or false
         const handleKeyDown = (e) => {
             setInput((key) => ({...key, [findInputKey(e.code)]: true}));
@@ -45,8 +44,6 @@ export const useInput = () => {
             document.removeEventListener('keydown', handleKeyDown);
             document.removeEventListener('keyup', handleKeyUp)
         }
-
     },[])
-
     return input;
 }

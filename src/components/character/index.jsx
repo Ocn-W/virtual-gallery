@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from "react";
 import { useFrame, useThree } from "@react-three/fiber";
-import { CapsuleCollider, CylinderCollider, RigidBody  } from "@react-three/rapier";
 import { useGLTF, useAnimations, OrbitControls } from "@react-three/drei";
+import { RigidBody, CapsuleCollider, RapierRigidBody, vec3, quat } from "@react-three/rapier";
 import { useInput } from "./controls";
 import * as THREE from 'three';
 
@@ -37,14 +37,14 @@ const directionOffset = ({forward, backward, left, right}) => {
 export function Player(props) {
   const model = useGLTF("/assets/blender-objects/character/testChar.gltf");
   const group = useRef(model.scene);
+  const rigidBody = useRef(<RapierRigidBody/>);
   const { forward, backward, left, right, shift } = useInput();
   const { animations } = useGLTF("/assets/blender-objects/character/testChar.gltf");
   const { actions } = useAnimations(animations, group);
-
   const currentAction = useRef('');
   const controlsRef = useRef(<OrbitControls/>);
   const camera = useThree(state => state.camera);
-  
+
   const updateCameraTarget = (moveX, moveZ) => {
     //move camera
     camera.position.x += moveX;
@@ -75,7 +75,6 @@ export function Player(props) {
       nextAction?.reset().fadeIn(0.2).play()
       currentAction.current = action;
     }
-
   }, [forward, backward, left, right, shift]);
 
   useFrame((state, delta) => {
@@ -96,7 +95,7 @@ export function Player(props) {
       //rotate model
       rotateQuarternion.setFromAxisAngle(
         rotateAngle,
-        angleYCameraDirection = newDirectionOffset
+        angleYCameraDirection + newDirectionOffset
       );
       model.scene.quaternion.rotateTowards(rotateQuarternion, 0.2);
 
@@ -114,15 +113,25 @@ export function Player(props) {
       const moveZ = walkDirection.z * velocity * delta;
       model.scene.position.x += moveX;
       model.scene.position.z += moveZ;
-      updateCameraTarget(moveX, moveZ);
+      updateCameraTarget(moveX, moveZ);    
+      
+      if(rigidBody.current) {
+      const position = vec3(model.scene.position);
+      const quaternion = quat(rotateQuarternion);
+      //set values for rigid body
+        rigidBody.current.setTranslation(position, true);
+        rigidBody.current.setRotation(quaternion, true);
+    }
     }
   })
-
 
   return (
     <>
     <OrbitControls ref={controlsRef} />
-    <primitive object={model.scene} {...props}/>
+    <RigidBody includeInvisible type='kinematicPosition' colliders='trimesh' gravityScale={0} ref={rigidBody}>
+      <CapsuleCollider args={[.8,.5,0]} position={[0,1.5,0]} />
+      <primitive object={model.scene} {...props}/>
+    </RigidBody>
     </>   
   );
 }

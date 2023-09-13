@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import { useGLTF } from "@react-three/drei";
+import { Environment, useGLTF } from "@react-three/drei";
 import { RigidBody } from "@react-three/rapier";
 
 export function Scene(props) {
@@ -32,9 +32,8 @@ export function Scene(props) {
         scale={[49.466, 32.953, 32.82]}
       />
     </group>
-    <directionalLight intensity={5}  position={[1,1,1]}/>
-    <directionalLight intensity={5}  position={[-1,1,-1]}/>
-    <directionalLight intensity={5}  position={[-1,-1,-1]}/>
+    <ambientLight intensity={5}/>
+    <Environment files={'/assets/blender-objects/scene/HDRI/kloofendal_48d_partly_cloudy_puresky_4k.hdr'} background/>
     </>
   );
 }
