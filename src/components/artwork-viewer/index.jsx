@@ -67,7 +67,8 @@ export default function ArtworkViewer(props) {
           <section className="art-details">
             <h2>{artwork[currArtwork].name}</h2>
             <p>{artwork[currArtwork].date}</p>
-            <p>{artwork[currArtwork].price}</p>
+            <p>Price: {artwork[currArtwork].price}</p>
+            <p>Size: {artwork[currArtwork].size}</p>
             <button>Purchase</button>
           </section>
         </section>

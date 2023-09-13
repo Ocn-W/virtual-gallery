@@ -4,6 +4,7 @@ export const artwork = [
     {
         name: 'Biblically Accurate Angels',
         date: '2023',
+        size: '30in x 40in',
         price: '$200',
         image: '/assets/artwork-images/BBAImg.JPG',
         GLTF: '/assets/blender-objects/paintings/bba-painting-exp.gltf',
@@ -11,6 +12,7 @@ export const artwork = [
     {
         name: 'End Game',
         date: '2023',
+        size: '30in x 40in',
         price: '$200',
         image: '/assets/artwork-images/EndGameImg.JPG',
         GLTF: '/assets/blender-objects/paintings/endgame-exp.gltf',
@@ -18,6 +20,7 @@ export const artwork = [
     {
         name: 'Essay',
         date: '2023',
+        size: '30in x 40in',
         price: '$200',
         image: '/assets/artwork-images/EssayImg.JPG',
         GLTF: '/assets/blender-objects/paintings/essay-exp.gltf',
@@ -25,6 +28,7 @@ export const artwork = [
     {
         name: 'Go!',
         date: '2023',
+        size: '30in x 40in',
         price: '$200',
         image: '/assets/artwork-images/GoImg.JPG',
         GLTF: '/assets/blender-objects/paintings/go!-exp.gltf',
@@ -32,6 +36,7 @@ export const artwork = [
     {
         name: 'Race Races Racer',
         date: '2023',
+        size: '30in x 40in',
         price: '$200',
         image: '/assets/artwork-images/ThreeRsImg.JPG',
         GLTF: '/assets/blender-objects/paintings/threeRs-exp.gltf',
