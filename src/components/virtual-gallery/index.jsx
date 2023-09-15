@@ -2,18 +2,16 @@ import React, { Suspense, useRef, useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import Loader from "../loader";
 import { Player } from "../character";
-import Navigation from "../navigation";
 import { Physics, RigidBody } from "@react-three/rapier";
 import { Scene } from "./scene";
 
 
 export default function VirtualGallery(props) {
   //WHEN GALLERY IS FINISHED SET TO TRUE
-  const [active,] = useState(false)
+  const [active,] = useState(true)
 
   return (
     <>
-      <Navigation />
       <section className="galleryContainer">
         {!active ? <h1>COMING SOON!</h1> : (
         <Canvas style={{ height: "100%", width: "auto" }} camera={{fov: 55, near: 0.1, far: 1000, position: [0, 3, 7]}}>

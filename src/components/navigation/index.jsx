@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Outlet } from 'react-router-dom';
 
 export default function Navigation() {
   return (
@@ -14,6 +14,7 @@ export default function Navigation() {
             <Link to='/checkout'>YOUR CART</Link>
         </ul>
     </nav>
+    <Outlet/>
     </>
   )
 }
