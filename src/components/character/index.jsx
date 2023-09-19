@@ -130,7 +130,9 @@ export function Player(props) {
     <OrbitControls ref={controlsRef} />
     <RigidBody includeInvisible type='kinematicPosition' colliders='trimesh' gravityScale={0} ref={rigidBody}>
       <CapsuleCollider args={[.8,.5,0]} position={[0,1.5,0]} />
-      <primitive object={model.scene} {...props}/>
+      <group dispose={null} {...props}>
+        <primitive object={model.scene} />
+      </group>
     </RigidBody>
     </>   
   );

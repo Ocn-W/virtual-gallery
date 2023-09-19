@@ -1,10 +1,8 @@
-import React from 'react'
-import Navigation from '../navigation'
+import React from 'react';
 
 export default function Checkout() {
   return (
     <>
-    <Navigation/>
     <div>Checkout</div>
     </>
   )

@@ -1,6 +1,6 @@
-import { React, useState, Suspense, startTransition, useEffect } from "react";
+import { React, useState, Suspense, startTransition } from "react";
 import { Canvas } from "@react-three/fiber";
-import { useGLTF, OrbitControls, PerspectiveCamera, Environment } from "@react-three/drei";
+import { useGLTF, OrbitControls, PerspectiveCamera } from "@react-three/drei";
 import Loader from "../loader/index.jsx";
 import { artwork } from "../paintings/index.jsx";
 
