@@ -8,6 +8,6 @@ export const router = createBrowserRouter([
   { path: "/", Component: Navigation, children: [
   { path: "/home", Component: Home, index: true },
   { path: "/gallery", Component: VirtualGallery },
-  { path: "/checkout*", Component: Checkout },
-  ] },
+  { path: "/checkout", Component: Checkout }], 
+  },
   ]);

@@ -1,0 +1,138 @@
+@use "../../index.scss";
+
+.checkout {
+  height: 100%;
+  width: 100%;
+  background-color: index.$primary-bkg-color;
+  display: flex;
+  justify-content: center;
+
+  .checkoutProducts {
+    height: 100vh;
+    width: 40%;
+    border-left: 1px solid black;
+    .checkoutTotal {
+      @include index.flexColCenter;
+      gap: 0;
+      border-bottom: 1px solid grey;
+
+      div {
+        @include index.flexRowCenter;
+        width: 100%;
+        line-height: 0;
+        gap: 10px;
+        border-bottom: 1px dashed grey;
+      }
+
+      .checkoutTotalInfo {
+        width: 100%;
+        padding-left: 0;
+        line-height: 0;
+
+        li {
+          margin-left: 0;
+          display: flex;
+          justify-content: space-between;
+          padding: 0 10px;
+        }
+      }
+    }
+    .productSection {
+      overflow-y: auto;
+      overflow-x: hidden;
+      height: 60%;
+
+      .products {
+        display: flex;
+        font-size: 12px;
+        padding: 5px;
+        gap: 10px;
+        width: 100%;
+        border-bottom: 1px solid grey;
+        img {
+          height: 50px;
+          width: 50px;
+          background-color: grey;
+        }
+
+        button {
+          background: none;
+          border: none;
+          cursor: pointer;
+          font-size: 10px;
+        }
+        button:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  .checkoutForm {
+    @include index.flexColCenter;
+    background-color: index.$primary-bkg-color;
+    width: 70%;
+
+    h1 {
+      margin: 10px 0;
+      font-size: 30px;
+    }
+
+    form {
+      height: fit-content;
+      width: 80%;
+      text-align: center;
+      border: 1px solid black;
+      border-top-left-radius: index.$curved-border;
+      border-top-right-radius: index.$curved-border;
+
+      input {
+        height: 20px;
+        margin: 5px;
+        background-color: wheat;
+      }
+      label {
+        font-size: 18px;
+      }
+
+      .paymentSection {
+        padding: 10px 0;
+        @include index.flexRowCenter;
+        border-bottom: 1px dashed grey;
+        gap: 20px;
+        p {
+          font-size: 18px;
+          margin: 5px;
+        }
+        div {
+          display: flex;
+          align-items: center;
+        }
+      }
+      .contactSection {
+        padding: 10px 0;
+        @include index.flexColCenter;
+        gap: 10px;
+        border-bottom: 1px dashed grey;
+        div {
+          label {
+            font-size: 12px;
+          }
+          @include index.flexRowCenter;
+        }
+      }
+      .shippingSection {
+        @include index.flexColCenter;
+        padding: 10px 0;
+      }
+
+      button {
+        background-color: black;
+        color: white;
+        padding: 20px;
+        width: 100%;
+        font-size: 24px;
+      }
+    }
+  }
+}
