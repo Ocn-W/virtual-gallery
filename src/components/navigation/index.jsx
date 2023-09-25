@@ -6,14 +6,15 @@ export default function Navigation() {
     <>
     <nav>
         <section>
-          <Link to='/home'><h1>O GALLERY</h1></Link>
+          <Link to='/'><h1>O GALLERY</h1></Link>
         </section>
         <ul>
           <Link to='/gallery'>VISIT GALLERY</Link>
           <li><a target='_blank' href='https://oceanwaring.netlify.app/'>PORTFOLIO</a></li>
-          <Link to='/checkout'>YOUR CART</Link>
+          <Link to='/checkout'>CHECKOUT</Link>
         </ul>
     </nav>
+
     <Outlet/>
     </>
   )
